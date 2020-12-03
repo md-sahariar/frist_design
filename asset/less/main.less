@@ -13,6 +13,7 @@ a:hover {
 
 img {
     vertical-align: middle;
+    object-fit: contain;
 }
 
 ul,
@@ -43,21 +44,22 @@ label,
     margin: 0;
 }
 
-body {
-    overflow-x: hidden;
-    background: #E5E5E5;
-}
-
 @open: 'Open Sans', sans-serif;
 @lato: 'Lato', sans-serif;
-
+@pureblack:#000000;
 @black: #363840;
 @grey: #999BA2;
 @grey2: #7B7D84;
 @orange: #F16334;
 @stroke: #DFE3EB;
+@white: #ffffff;
 @alert: #FE4747;
 
+body {
+    overflow-x: hidden;
+    background: #E5E5E5;
+    color: @black;
+}
 .normal {
     font-weight: 400;
 }
@@ -72,6 +74,57 @@ body {
     font-size: 58px;
     color: @black;
 }
+.p {
+    font-style:@lato;
+    font-weight: 400;
+    font-size: 16px;
+    color:@grey;
+}
+
+.shadow (@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow: @string;
+    box-shadow: @string;
+}
+
+.radius (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.opacity (@opacity) {
+    -webkit-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation: @name @duration @delay @ease;
+    -ms-animation: @name @duration @delay @ease;
+    animation: @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+    transform: @string;
+}
 
 .pt100 {
     padding-top: 100px;
@@ -81,9 +134,22 @@ body {
     padding-bottom: 100px;
 }
 
-.btn{
-    padding: 15px 20px;
-    border: 0;
+.btn {
+    padding: 12px 10px;
+    margin: 1px;
+    .radius(0);
+    border: 1px solid @orange !important;
+    cursor: pointer;
+    color: @orange !important;
+    background: transparent;
+    .transition(0.4s);
+
+    &:hover {
+        background-color: @orange !important;
+        border: 1px;
+        color: @white !important;
+        border-color: @orange !important;
+    }
 }
 
 header {
@@ -102,17 +168,59 @@ header {
                     margin-right: 0;
                 }
 
-                .span {
-                    color: @orange;
-                }
-
                 .nav-link {
                     font-family: @lato;
                     font-size: 14px;
                     .normal;
                     color: @black;
                 }
+
+                .orange {
+                    color: @orange;
+                }
+
+                .nav-link.btn {
+                    .transform(translateY(-8px));
+                }
             }
         }
     }
 }
+
+.banner{
+        .slide{
+            .carousel-indicators{
+                li{
+                    width: 8px;
+                    height: 8px;
+                    background-color:@stroke;
+                }
+                .active{
+                    background-color: @orange;
+                }
+            }
+        }
+        
+    }
+.banner{ 
+    position: relative;
+    
+    .details {
+            padding: 96px 0;
+            position: absolute;
+            .heading{
+                padding-top: 95px;
+                padding-left: 60px;
+                .h1;
+            }
+            p {
+               padding: 16px 60px 56px;
+                .p;
+            }
+            .button{
+                .bnt;
+                padding: 12px 25px 12px 23px ;
+                 
+            }
+        }
+    }

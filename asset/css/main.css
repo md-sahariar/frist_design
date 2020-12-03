@@ -30,6 +30,7 @@ a:hover {
 }
 img {
   vertical-align: middle;
+  object-fit: contain;
 }
 ul,
 ol {
@@ -60,6 +61,7 @@ label,
 body {
   overflow-x: hidden;
   background: #E5E5E5;
+  color: #363840;
 }
 .normal {
   font-weight: 400;
@@ -73,6 +75,12 @@ body {
   font-size: 58px;
   color: #363840;
 }
+.p {
+  font-style: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999ba2;
+}
 .pt100 {
   padding-top: 100px;
 }
@@ -80,8 +88,29 @@ body {
   padding-bottom: 100px;
 }
 .btn {
-  padding: 15px 20px;
-  border: 0;
+  padding: 12px 10px;
+  margin: 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #f16334 !important;
+  cursor: pointer;
+  color: #f16334 !important;
+  background: transparent;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #f16334 !important;
+  border: 1px;
+  color: #ffffff !important;
+  border-color: #f16334 !important;
 }
 header {
   top: 0;
@@ -97,12 +126,50 @@ header .navbar .menu .nav-item {
 header .navbar .menu .nav-item:last-child {
   margin-right: 0;
 }
-header .navbar .menu .nav-item .span {
-  color: #f16334;
-}
 header .navbar .menu .nav-item .nav-link {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #363840;
+}
+header .navbar .menu .nav-item .orange {
+  color: #f16334;
+}
+header .navbar .menu .nav-item .nav-link.btn {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+.banner .slide .carousel-indicators li {
+  width: 8px;
+  height: 8px;
+  background-color: #dfe3eb;
+}
+.banner .slide .carousel-indicators .active {
+  background-color: #f16334;
+}
+.banner {
+  position: relative;
+}
+.banner .details {
+  padding: 96px 0;
+  position: absolute;
+}
+.banner .details .heading {
+  padding-top: 95px;
+  padding-left: 60px;
+  font-style: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 58px;
+  color: #363840;
+}
+.banner .details p {
+  padding-left: 60px;
+  padding-top: 16px;
+  font-style: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999ba2;
 }
