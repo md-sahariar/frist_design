@@ -1,0 +1,102 @@
+@open: 'Open Sans', sans-serif;
+@lato: 'Lato', sans-serif;
+@pureblack:#000000;
+@black: #363840;
+@grey: #999BA2;
+@grey2: #7B7D84;
+@orange: #F16334;
+@stroke: #DFE3EB;
+@white: #ffffff;
+@alert: #FE4747;
+
+.normal {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.h1 {
+    font-style: @open;
+    font-weight: 800;
+    font-size: 58px;
+    color: @black;
+}
+.p {
+    font-style:@lato;
+    font-weight: 400;
+    font-size: 16px;
+    color:@grey;
+}
+
+.shadow (@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow: @string;
+    box-shadow: @string;
+}
+
+.radius (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.opacity (@opacity) {
+    -webkit-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation: @name @duration @delay @ease;
+    -ms-animation: @name @duration @delay @ease;
+    animation: @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+    transform: @string;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+.pb100 {
+    padding-bottom: 100px;
+}
+
+.btn {
+    padding: 12px 10px;
+    margin: 1px;
+    .radius(0);
+    border: 1px solid @orange !important;
+    cursor: pointer;
+    color: @orange !important;
+    background: transparent;
+    .transition(0.4s);
+
+    &:hover {
+        background-color: @orange !important;
+        border: 1px;
+        color: @white !important;
+        border-color: @orange !important;
+    }
+}

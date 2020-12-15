@@ -69,11 +69,18 @@ body {
 .bold {
   font-weight: 700;
 }
-.h1 {
+h1 {
   font-style: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 58px;
   color: #363840;
+  line-height: 73px;
+}
+.h3 {
+  font-style: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  flood-color: #363840;
 }
 .p {
   font-style: 'Lato', sans-serif;
@@ -116,6 +123,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #ffffff;
 }
 header .navbar .menu {
   padding: 30px 0 20px;
@@ -142,34 +150,71 @@ header .navbar .menu .nav-item .nav-link.btn {
   -o-transform: translateY(-8px);
   transform: translateY(-8px);
 }
+.banner {
+  position: relative;
+  height: 720px;
+}
+.banner .slide .carousel-indicators {
+  right: unset;
+  bottom: 48px;
+  left: 4%;
+  margin: 0;
+}
 .banner .slide .carousel-indicators li {
   width: 8px;
   height: 8px;
-  background-color: #dfe3eb;
+  background-color: #E2E8F1;
+  opacity: 1;
 }
 .banner .slide .carousel-indicators .active {
   background-color: #f16334;
 }
-.banner {
-  position: relative;
+.banner .slide .carousel-item img {
+  height: 100%;
+  width: 100%;
 }
 .banner .details {
+  width: 624px;
   padding: 96px 0;
+  padding-left: 60px;
   position: absolute;
+  left: 0;
+  top: 96px;
+  background: #ffffff;
 }
-.banner .details .heading {
-  padding-top: 95px;
-  padding-left: 60px;
-  font-style: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 58px;
-  color: #363840;
+.banner .details .det_text {
+  width: 463px;
 }
-.banner .details p {
-  padding-left: 60px;
+.banner .details .det_text p {
   padding-top: 16px;
+  padding-bottom: 56px;
   font-style: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #999ba2;
+}
+.banner .details .button .btn {
+  margin: 12px 25px 12px 0;
+}
+.company {
+  padding-top: 96px;
+  padding-bottom: 98px;
+  background-color: #dfe3eb;
+}
+.company .title .h3 {
+  font-style: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  flood-color: #363840;
+  padding-bottom: 56px;
+}
+.company .info {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  padding-left: 23px;
+  background-color: #ffffff;
+}
+.company .info .heading .icon {
+  padding: 7px 5px;
+  display: flex;
 }
