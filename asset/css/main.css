@@ -136,6 +136,23 @@ header .navbar .menu .nav-item {
 header .navbar .menu .nav-item:last-child {
   margin-right: 0;
 }
+header .navbar .menu .nav-item::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 6px;
+  left: 0;
+  background: #f16334;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+header .navbar .menu .nav-item:hover::after {
+  width: 350px;
+}
 header .navbar .menu .nav-item .nav-link {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -362,6 +379,20 @@ header .navbar .menu .nav-item .nav-link.btn {
 .service .sample .srv-det .more {
   padding-top: 0;
 }
+.service .sample::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 6px;
+  left: 0;
+  background: #f16334;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
 .service .sample:hover {
   -webkit-box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.16);
@@ -373,16 +404,5 @@ header .navbar .menu .nav-item .nav-link.btn {
   transform: scale(1.001);
 }
 .service .sample:hover::after {
-  position: absolute;
-  content: '';
   width: 350px;
-  height: 6px;
-  left: 175px;
-  background: #f16334;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 0;
 }
