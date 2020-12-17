@@ -77,7 +77,7 @@ h1 {
 }
 
 .h3 {
-    font-style: @open;
+    font-family: @open;
     font-weight: 700;
     font-size: 24px;
     color: @black;
@@ -272,6 +272,13 @@ header {
     }
 }
 
+.title2 {
+    font-size: 16px;
+    .bold;
+    color: @black;
+    padding-top: 4px;
+}
+
 .company {
     padding-top: 96px;
     padding-bottom: 68px;
@@ -298,10 +305,7 @@ header {
             }
 
             .title2 {
-                font-size: 16px;
-                .bold;
-                color: @black;
-                padding-top: 4px;
+                .title2;
             }
 
         }
@@ -359,16 +363,76 @@ header {
         }
     }
 
-    .more {
-        padding-top: 57px;
-        text-align: center;
 
-        a {
-            font-size: 16px;
-            font-family: @lato;
-            .bold;
-            color: @orange;
-            line-height: 20px;
+}
+
+.more {
+    padding-top: 57px;
+    text-align: center;
+    color: @orange;
+
+    a {
+        font-size: 16px;
+        font-family: @lato;
+        .bold;
+        color: @orange;
+        line-height: 20px;
+        padding-right: 12px;
+    }
+}
+
+.service {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: @stroke;
+
+    .sample {
+        background-color: #f1eeee;
+        .transition(0.4s);
+
+        .srv-img {
+            img {
+                .ofc;
+            }
+        }
+
+        .srv-det {
+            padding: 32px 0;
+
+            .title2 {
+                .title2;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .exp2 {
+                .p;
+                padding: 16px 25px 48px 25px;
+                line-height: 23px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .more {
+                padding-top: 0;
+            }
+        }
+
+
+        &:hover {
+            .shadow (0px 12px 30px rgba(0, 0, 0, 0.16));
+            .transform(scale(1.001));
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 350px;
+                height: 6px;
+                left: 175px;
+                background: @orange;
+                .transform(translateX(-50%));
+                bottom: 0;
+            }
         }
     }
 }

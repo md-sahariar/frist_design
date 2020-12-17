@@ -76,7 +76,7 @@ h1 {
   line-height: 73px;
 }
 .h3 {
-  font-style: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #363840;
@@ -209,11 +209,17 @@ header .navbar .menu .nav-item .nav-link.btn {
   text-align: center;
 }
 .title h3 {
-  font-style: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #363840;
   padding-bottom: 56px;
+}
+.title2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #363840;
+  padding-top: 4px;
 }
 .company {
   padding-top: 96px;
@@ -303,14 +309,80 @@ header .navbar .menu .nav-item .nav-link.btn {
   -moz-opacity: 1;
   opacity: 1;
 }
-.work .more {
+.more {
   padding-top: 57px;
   text-align: center;
+  color: #f16334;
 }
-.work .more a {
+.more a {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   color: #f16334;
   line-height: 20px;
+  padding-right: 12px;
+}
+.service {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #dfe3eb;
+}
+.service .sample {
+  background-color: #f1eeee;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.service .sample .srv-img img {
+  object-fit: contain;
+}
+.service .sample .srv-det {
+  padding: 32px 0;
+}
+.service .sample .srv-det .title2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #363840;
+  padding-top: 4px;
+  font-size: 18px;
+  text-align: center;
+}
+.service .sample .srv-det .exp2 {
+  font-style: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999ba2;
+  padding: 16px 25px 48px 25px;
+  line-height: 23px;
+  font-size: 14px;
+  text-align: center;
+}
+.service .sample .srv-det .more {
+  padding-top: 0;
+}
+.service .sample:hover {
+  -webkit-box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.16);
+  -webkit-transform: scale(1.001);
+  -moz-transform: scale(1.001);
+  -ms-transform: scale(1.001);
+  -o-transform: scale(1.001);
+  transform: scale(1.001);
+}
+.service .sample:hover::after {
+  position: absolute;
+  content: '';
+  width: 350px;
+  height: 6px;
+  left: 175px;
+  background: #f16334;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
 }
